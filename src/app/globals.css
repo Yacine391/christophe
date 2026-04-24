@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --gold: #CA8A04;
+  --gold-light: #FFD700;
+  --bg: #050505;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #050505;
+}
+
+body {
+  background: #050505;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #CA8A04;
+  border-radius: 2px;
+}
+
+/* Date/time input dark styling */
+input[type="date"],
+input[type="time"] {
+  color-scheme: dark;
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 1px solid #CA8A04;
+  outline-offset: 2px;
+}
+
+* {
+  box-sizing: border-box;
+}
