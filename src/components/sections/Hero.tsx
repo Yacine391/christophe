@@ -58,8 +58,8 @@ export default function Hero({ lang, onQuoteClick }: HeroProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.7 }}
           className="font-black leading-none mb-4 text-[clamp(3rem,9vw,7rem)]"
-          style={{ fontFamily: "var(--font-orbitron), sans-serif" }}
           style={{
+            fontFamily: "var(--font-orbitron), sans-serif",
             background: "linear-gradient(135deg, #FFD700 0%, #CA8A04 50%, #FFD700 100%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
