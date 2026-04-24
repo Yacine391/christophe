@@ -9,9 +9,7 @@ import {
   Stars,
 } from "@react-three/drei";
 import { Suspense, useRef } from "react";
-import { EffectComposer, Bloom, ChromaticAberration } from "@react-three/postprocessing";
-import { BlendFunction } from "postprocessing";
-import { Vector2 } from "three";
+import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import CarModel from "./CarModel";
 import RainParticles from "./RainParticles";
 
@@ -65,14 +63,10 @@ function SceneContent() {
       {/* Post processing */}
       <EffectComposer>
         <Bloom
-          intensity={1.8}
-          luminanceThreshold={0.2}
-          luminanceSmoothing={0.9}
+          intensity={1.2}
+          luminanceThreshold={0.3}
+          luminanceSmoothing={0.8}
           mipmapBlur
-        />
-        <ChromaticAberration
-          blendFunction={BlendFunction.NORMAL}
-          offset={new Vector2(0.0008, 0.0008)}
         />
       </EffectComposer>
     </>
@@ -85,7 +79,7 @@ export default function CarScene() {
       <Canvas
         camera={{ position: [2.5, 1.2, 3.5], fov: 40 }}
         gl={{ antialias: true, alpha: true }}
-        dpr={[1, 2]}
+        dpr={[1, 1.5]}
       >
         <Suspense fallback={null}>
           <SceneContent />

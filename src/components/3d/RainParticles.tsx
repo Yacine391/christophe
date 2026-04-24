@@ -4,7 +4,7 @@ import { useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
-const RAIN_COUNT = 600;
+const RAIN_COUNT = 250;
 
 export default function RainParticles() {
   const meshRef = useRef<THREE.InstancedMesh>(null);

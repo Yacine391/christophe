@@ -17,10 +17,10 @@ function Wheel({ position }: { position: [number, number, number] }) {
         <cylinderGeometry args={[0.14, 0.14, 0.16, 16]} />
         <meshStandardMaterial color="#888888" roughness={0.2} metalness={0.9} />
       </mesh>
-      {/* Rim spokes */}
-      {[0, 1, 2, 3, 4].map((i) => (
-        <mesh key={i} rotation={[Math.PI / 2, (i * Math.PI * 2) / 5, 0]}>
-          <boxGeometry args={[0.02, 0.14, 0.12]} />
+      {/* Rim spokes — 3 légers */}
+      {[0, 1, 2].map((i) => (
+        <mesh key={i} rotation={[Math.PI / 2, (i * Math.PI * 2) / 3, 0]}>
+          <boxGeometry args={[0.015, 0.12, 0.12]} />
           <meshStandardMaterial color="#AAAAAA" roughness={0.1} metalness={1} />
         </mesh>
       ))}
